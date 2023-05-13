@@ -1,0 +1,9 @@
+﻿Исходя из того, что в БД содержатся отдельно таблицы Product и Category, 
+для решения может использоваться LEFT JOIN. В зависимости от того, какие 
+поля содержатся в каждой из таблиц, скрипт может выглядеть по разному.
+В своем решении я буду исходить из того, что в таблице Product существуют поля ProductId, ProductName и CategoryId,
+а в таблице Category поля CategoryId и CategoryName.
+
+SELECT Products.ProductName, Categories.CategoryName
+FROM Products
+LEFT JOIN Categories ON Products.CategoryID = Categories.CategoryID
